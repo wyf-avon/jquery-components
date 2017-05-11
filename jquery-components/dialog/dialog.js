@@ -32,7 +32,6 @@
         }
 
         _this.createDOM = function () {
-            $(this).empty();
             $(this).append("<div class='dialog-title'><h3></h3><i>×</i></div>");
             $(this).append("<div class='dialog-content'></div>");
 
@@ -131,12 +130,14 @@
             $dialog.css({
                 "display": "none"
             })
+            $dialog.empty();
         }
 
         $(this).on("click", ".dialog-title i", function () {
             _this.hide();
         });
 
+        $(this).off("click", ".dialog-btn-confirm");  //on方法绑定事件后执行多次,解决：在每次绑定事件之前，要对该事件解绑
         $(this).on("click", ".dialog-btn-confirm", function () {
             opts.confirm();
         });
