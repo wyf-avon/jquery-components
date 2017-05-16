@@ -1,7 +1,3 @@
-/**
- * 
- * 
- */
 (function ($) {
     var defaults = {
         title: "默认弹出框标题",
