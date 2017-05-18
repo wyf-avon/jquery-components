@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title> Design JS component with jQuery </title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script src="./draggable.js"></script>
+</head>
+<style>
+    #draggable {
+        width: 150px;
+        height: 150px;
+        border: 1px solid #dddddd;
+        position: absolute;
+        background: #000eee;
+        padding: 0;
+    }
+</style>
+
+<body>
+    <div id="draggable" class="drag"></div>
+
+    <script type="text/javascript">
+        $("#draggable").draggable();
+
+    </script>
+</body>
+
+</html>
